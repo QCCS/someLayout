@@ -1,0 +1,97 @@
+/* 流体 */
+.liquid #page_wrapper {
+    margin: 0 20px;
+}
+
+.liquid header,
+.liquid footer {
+    clear: both;
+    width: 100%;
+}
+
+.liquid header {
+    padding: 0;
+    position: relative;
+}
+
+.liquid header select {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.liquid menu {
+    clear: left;
+    float: left;
+    margin: 20px 0;
+    padding: 0;
+    width: 17.5%;
+}
+
+.liquid menu ul {
+    margin: 20px 0;
+    padding: 0;
+}
+
+.liquid menu ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.liquid menu ul li ul {
+    margin: 0 0 0 20%;
+}
+
+.liquid article {
+    clear: none;
+    float: left;
+    margin: 20px 0;
+    width: 64.9%;
+}
+
+.liquid article #article_inner {
+    margin: 0 20px;
+}
+
+.liquid article .block img {
+    clear: left;
+    float: left;
+    width: 20%;
+    zoom: 1;
+}
+
+.liquid article .block .block_content {
+    clear: right;
+    margin-left: 20.1%;
+}
+
+.liquid article .block .block_content h3,
+.liquid article .block .block_content p,
+.liquid article .block .block_content a {
+    margin-left: 20px;
+}
+
+.liquid article .block p.summary {
+    display: none;
+}
+
+.liquid #overview #layout_3 {
+    display: block;
+}
+
+.liquid aside {
+    clear: right;
+    float: right;
+    margin: 20px 0;
+    padding: 0;
+    width: 17.5%;
+}
+
+.liquid aside .block img {
+    display: none;
+}
+
+.liquid aside .block p.main {
+    display: none;
+}

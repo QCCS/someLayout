@@ -1,0 +1,86 @@
+/* 固定宽度 */
+.static #page_wrapper {
+    margin: 0 auto;
+    width: 960px;
+}
+
+.static header {
+    padding: 0;
+    position: relative;
+}
+
+.static header select {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.static menu,
+.static aside {
+    clear: none;
+    float: left;
+    margin: 20px 0;
+    padding: 0;
+    width: 200px;
+    zoom: 1;
+}
+
+.static aside {
+    float: right;
+}
+
+.static menu ul {
+    margin: 20px 0;
+    padding: 0;
+}
+
+.static menu ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.static menu ul li ul {
+    margin: 0 0 0 40px;
+}
+
+.static article {
+    clear: none;
+    float: left;
+    margin: 20px;
+    padding: 0;
+    width: 520px;
+}
+
+.static article .block img {
+    clear: left;
+    float: left;
+    width: 120px;
+    zoom: 1;
+}
+
+.static article .block .block_content {
+    clear: right;
+    margin-left: 140px;
+}
+
+.static article .block p.summary {
+    display: none;
+}
+
+.static #overview #layout_3 {
+    display: block;
+}
+
+.static aside .block img {
+    display: none;
+}
+
+.static aside .block p.main {
+    display: none;
+}
+
+.static footer {
+    clear: both;
+    padding: 0;
+}

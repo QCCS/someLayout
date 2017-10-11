@@ -1,0 +1,29 @@
+/* 自适应 */
+.adaptive #page_wrapper {
+    margin: 0 auto;
+}
+@media all and (max-width: 479px) {
+    .adaptive #page_wrapper {
+        width: 280px;
+    }
+}
+@media all and (min-width: 480px) and (max-width: 719px) {
+    .adaptive #page_wrapper {
+        width: 440px;
+    }
+}
+@media all and (min-width: 720px) and (max-width: 959px) {
+    .adaptive #page_wrapper {
+        width: 680px;
+    }
+}
+@media all and (min-width: 960px) and (max-width: 1279px) {
+    .adaptive #page_wrapper {
+        width: 920px;
+    }
+}
+@media all and (min-width: 1280px) {
+    .adaptive #page_wrapper {
+        width: 1240px;
+    }
+}

@@ -1,0 +1,243 @@
+/*自适应与响应式*/
+.adaptive header,
+.responsive header {
+    margin: 20px 0 0 0;
+    padding: 0;
+    position: relative;
+}
+
+@media all and (max-width: 719px) {
+    .adaptive header select,
+    .responsive header select {
+        display: block;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+}
+
+@media all and (min-width: 720px) {
+    .adaptive header select,
+    .responsive header select {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+}
+
+.adaptive menu,
+.adaptive article,
+.adaptive aside,
+.adaptive footer,
+.responsive menu,
+.responsive article,
+.responsive aside,
+.responsive footer {
+    margin: 20px 0;
+    padding: 0;
+}
+
+@media all and (max-width: 719px) {
+    .adaptive #overview #layout_1,
+    .responsive #overview #layout_1 {
+        display: block;
+    }
+}
+
+@media all and (min-width: 720px) and (max-width: 959px) {
+    .adaptive menu,
+    .responsive menu {
+        clear: left;
+        float: left;
+        width: 24.9%;
+    }
+
+    .adaptive article,
+    .responsive article {
+        clear: none;
+        float: left;
+        margin: 20px 0;
+        width: 75%;
+    }
+
+    .adaptive article #article_inner,
+    .responsive article #article_inner {
+        margin: 0 0 0 20px;
+    }
+
+    .adaptive aside,
+    .responsive aside {
+        clear: both;
+        float: none;
+        width: 100%;
+    }
+
+    .adaptive #overview #layout_2,
+    .responsive #overview #layout_2 {
+        display: block;
+    }
+}
+
+@media all and (min-width: 960px) {
+    .adaptive menu,
+    .responsive menu {
+        clear: left;
+        float: left;
+        width: 17.5%;
+    }
+
+    .adaptive article,
+    .responsive article {
+        clear: none;
+        float: left;
+        margin: 20px 0;
+        width: 64.9%;
+    }
+
+    .adaptive article #article_inner,
+    .responsive article #article_inner {
+        margin: 0 20px;
+    }
+
+    .adaptive aside,
+    .responsive aside {
+        clear: none;
+        float: right;
+        width: 17.5%;
+    }
+
+    .adaptive #overview #layout_3,
+    .responsive #overview #layout_3 {
+        display: block;
+    }
+}
+
+.adaptive menu ul,
+.responsive menu ul {
+    margin: 20px 0;
+    padding: 0;
+}
+
+.adaptive menu ul li,
+.responsive menu ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.adaptive menu ul li ul,
+.responsive menu ul li ul {
+    margin: 0 0 0 40px;
+}
+
+.adaptive article .block img,
+.responsive article .block img {
+    clear: left;
+    float: left;
+    width: 20%;
+    zoom: 1;
+}
+
+.adaptive article .block .block_content,
+.responsive article .block .block_content {
+    clear: right;
+    margin-left: 20.1%;
+}
+
+.adaptive article .block .block_content h3,
+.adaptive article .block .block_content p,
+.adaptive article .block .block_content a,
+.responsive article .block .block_content h3,
+.responsive article .block .block_content p,
+.responsive article .block .block_content a {
+    margin-left: 20px;
+}
+
+.adaptive article .block p.summary,
+.responsive article .block p.summary {
+    display: none;
+}
+
+.adaptive aside .block img,
+.responsive aside .block img {
+    display: none;
+}
+
+.adaptive aside .block p.main,
+.responsive aside .block p.main {
+    display: none;
+}
+
+@media all and (min-width: 720px) and (max-width: 959px) {
+    .adaptive aside .block img,
+    .responsive aside .block img {
+        clear: left;
+        display: block;
+        float: left;
+        width: 20%;
+        zoom: 1;
+    }
+
+    .adaptive aside .block .block_content,
+    .responsive aside .block .block_content {
+        clear: right;
+        margin-left: 20.1%;
+    }
+
+    .adaptive aside .block .block_content h3,
+    .adaptive aside .block .block_content p,
+    .adaptive aside .block .block_content a,
+    .responsive aside .block .block_content h3,
+    .responsive aside .block .block_content p,
+    .responsive aside .block .block_content a {
+        margin-left: 20px;
+    }
+
+    .adaptive aside .block p.summary,
+    .responsive aside .block p.summary {
+        display: none;
+    }
+
+    .adaptive aside .block p.main,
+    .responsive aside .block p.main {
+        display: block;
+    }
+}
+
+@media all and (max-width: 719px) {
+    .adaptive aside .block img,
+    .responsive aside .block img {
+        clear: left;
+        display: block;
+        float: left;
+        width: 20%;
+        zoom: 1;
+    }
+
+    .adaptive aside .block .block_content,
+    .responsive aside .block .block_content {
+        clear: right;
+        margin-left: 20.1%;
+    }
+
+    .adaptive aside .block .block_content h3,
+    .adaptive aside .block .block_content p,
+    .adaptive aside .block .block_content a,
+    .responsive aside .block .block_content h3,
+    .responsive aside .block .block_content p,
+    .responsive aside .block .block_content a {
+        margin-left: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
