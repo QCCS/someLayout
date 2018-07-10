@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>不定宽高水平和垂直居中</h1>
+<style>
+
+    html,body{
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
+    }
+    /*1.最简单的flex布局,外层容器加上如下样式即可*/
+    /*外层容器*/
+    #test {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 500px;
+        background: darkred;
+    }
+    #test div{
+        background: red;
+    }
+
+    /*2.利用table-cell*/
+    /*外层容器*/
+    #test1 {
+        display:table-cell;
+        text-align:center;
+        vertical-align:middle;
+        background: darkkhaki;
+        width: 300px;
+        height: 300px;
+        margin: 0px auto;
+    }
+    /*内部元素*/
+    #test1-inner {
+        vertical-align:middle;
+        display:inline-block;
+        background: darkgoldenrod;
+    }
+
+    /*3.使用CSS3 transform*/
+    /*外层容器*/
+    #test2 {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        background: darkgreen;
+        margin: auto;
+    }
+    /*内部元素*/
+    #test2-inner {
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        background: darkcyan;
+    }
+
+</style>
+
+
+<div id="test2">
+    <div id="test2-inner">test2-inner</div>
+</div>
+
+<div id="test">
+    <div>aaa</div>
+</div>
+
+
+<div id="test1">
+    <div id="test1-inner">test1-inner</div>
+</div>
+
+
+
+</body>
+</html>
