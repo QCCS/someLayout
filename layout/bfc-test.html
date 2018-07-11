@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .left{
+            width: 300px;
+            background: red;
+            height: 900px;
+            float: left;
+        }
+        .right{
+            display: block;
+            height: 1000px;
+            background: darkcyan;
+            /*overflow: auto;*/
+            overflow: hidden;
+            /*为什么加overflow为hidden或者auto，就是因为浏览器渲染的时候计算BFC的高度时，浮动元素也参与计算
+            由于是自适应，当宽度变小的时候，如果不设置，会影响下面的元素
+            */
+        }
+        .f-box{
+            float: left;
+            width: 200px;
+            height: 200px;
+            background: darkgoldenrod;
+            margin: 30px;
+
+
+        }
+        .clear{
+            clear: both;
+        }
+
+        .b-box{
+            overflow:hidden ;
+            height: 100px;
+            background: darkgoldenrod;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+
+1内部的Box会在垂直方向，一个接一个地放置
+<hr>
+2Box垂直方向的距离由margin决定。属于同一个BFC的两个相邻Box的margin会发生重叠
+<hr>
+3BFC的区域不会与float box重叠。
+<hr>
+4计算BFC的高度时，浮动元素也参与计算
+<hr>
+
+5每个元素的margin-box的左边， 与包含块border-box的左边相接触(对于从左往右的格式化，否则相反)。即使存在浮动也是如此。
+这个规程很有用，自适应布局
+<hr>
+<div>
+    <div class="left">left</div>
+    <div id="right" class="right">
+        <hr>
+        5虽然存在浮动的元素left，但right的左边依然会与包含块的左边相接触。
+        但是，3BFC的区域不会与float box重叠，所以把left设置浮动就可以了。
+        <hr>
+        <div class="f-box"></div>
+        <div class="f-box"></div>
+        <div class="f-box"></div>
+        <div class="f-box"></div>
+
+        <div class="f-box"></div>
+        <div class="f-box"></div>
+        <div class="f-box"></div>
+        <div class="f-box"></div>
+        <div class="f-box"></div>
+    </div>
+
+    <div class="clear"></div>
+    <hr>
+    浮动元素边距不重叠
+    <hr>
+    <div class="f-box"></div>
+    <div class="f-box"></div>
+    <div class="f-box"></div>
+    <div class="f-box"></div>
+
+    <div class="f-box"></div>
+    <div class="f-box"></div>
+    <div class="f-box"></div>
+    <div class="f-box"></div>
+
+    <div class="f-box"></div>
+    <div class="f-box"></div>
+    <div class="f-box"></div>
+    <div class="f-box"></div>
+    <div class="clear"></div>
+    <hr>
+
+    普通块级元素边距重叠
+    <hr>
+    <div class="b-box"></div>
+    <div class="b-box"></div>
+    <div class="b-box"></div>
+</div>
+
+</body>
+
+<script>
+    console.log(right.offsetWidth)
+</script>
+</html>
