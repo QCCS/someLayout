@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+
+    <style>
+        .box {
+            height: 800px;
+            background: darkgoldenrod;
+
+            display: flex; /*弹性盒子*/
+
+            /*下面六个属性很重要：需要理解与记住*/
+            flex-direction: row; /*主轴的方向，从左-右；上-下，右-左，下-上*/
+            flex-wrap: wrap; /*排列的项目是否换行,换行，不换行(宽度不够会压缩)，换行在上*/
+            /*flex-flow:row nowrap;此属性是flex-direction flex-wrap两个属性的简写*/
+            justify-content: flex-start; /*项目的水平对齐方式，左，右，居中，两端对齐，每两个项目距离一样 | flex-end | center | space-between | space-around*/
+            align-items: flex-start; /*项目垂直对齐方式，上，下，居中，第一行文字对齐，居中 flex-start | flex-end | center | baseline | stretch;*/
+            align-content: center; /*性定义了多根轴线(有换行的情形)的对齐方式。如果项目只有一根轴线，该属性不起作用。flex-start | flex-end | center | space-between | space-around | stretch;*/
+        }
+
+        .item {
+            height: 100px;
+            background: darkred;
+            border: solid 1px;
+        }
+
+        .item1 {
+            /*order:1;*/
+            /*flex-grow:2;*/
+        }
+
+        .item2 {
+            order: 0; /*默认是0，越小越靠前*/
+            /*flex-grow:1;属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。 default 0 */
+            /*flex-shrink:3; 属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。 default 1 */
+            flex-basis:auto;/*属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。*/
+
+            flex:0 1 auto;/*属性是flex-grow, flex-shrink 和 flex-basis的简写，默认值为0 1 auto。后两个属性可选。*/
+            align-self:flex-end;/*align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch*/
+        }
+
+        /*我要盒子里面的内容垂直左右居中*/
+        .box1 {
+            width: 400px;
+            height: 400px;
+            margin-top: 10px;
+            background: darkgoldenrod;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+注意，设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效。
+
+
+<div class="box">
+
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+
+    <div class="item item3">3</div>
+    <div class="item item4">4</div>
+
+    <div class="item item6">6</div>
+    <div class="item item7">7</div>
+
+</div>
+
+<div class="box1">
+    <div class="item">7</div>
+</div>
+</body>
+</html>
