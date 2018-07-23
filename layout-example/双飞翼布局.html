@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+
+
+        #header{
+
+            height: 100px;
+            background: darkgoldenrod;
+        }
+
+
+        #middle{
+            min-height: 300px;
+            overflow:hidden;/*bfc清除浮动*/
+        }
+
+        #main{
+            background: darkkhaki;
+            min-height: 300px;
+            float:left;
+            width: 100%;
+        }
+        #mainInner{
+            margin: 0 200px;/*双飞翼布局关键点*/
+        }
+        #left{
+            min-height: 300px;
+            background: darkcyan;
+            float: left;
+            margin-left:-100%;
+            width: 200px;
+        }
+        #right{
+            min-height: 300px;
+            background: darkgrey;
+            float: left;
+            margin-left: -200px;
+            width: 200px;
+        }
+
+
+        #footer{
+            background: darkblue;
+            height: 100px;
+        }
+
+        .box-c{
+            margin-top: 20px;
+            overflow:hidden;/*bfc清除浮动*/
+            background: darkcyan;
+        }
+        .box{
+            width: 300px;
+            height: 300px;
+            background: red;
+            float: left;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="header">header</div>
+
+<div id="middle">
+    <div id="main">
+        <div id="mainInner">这个放在前面，保证先渲染</div>
+    </div>
+    <div id="left">left</div>
+    <div id="right">right</div>
+</div>
+
+<div id="footer">footer</div>
+
+
+
+<div class="box-c">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+box
+
+</body>
+</html>
