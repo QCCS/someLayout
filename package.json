@@ -7,8 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "publish": "git pull",
-    "build": "git pull",
+    "publish": "node publish.js",
+    "build": "git build.js",
     "type": "git",
     "url": "git+https://github.com/QCCS/someLayout.git"
   },
