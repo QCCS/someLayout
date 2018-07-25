@@ -3,4 +3,4 @@
  * Email li.zhou@huilianyi.com
  */
 
-console.log("build");
+console.log("publish");
