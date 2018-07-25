@@ -8,7 +8,7 @@
   },
   "repository": {
     "publish": "git pull",
-    "build": "git",
+    "build": "git pull",
     "type": "git",
     "url": "git+https://github.com/QCCS/someLayout.git"
   },
